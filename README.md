@@ -76,4 +76,3 @@ MIT
 
 - Dados fornecidos por [YGOProdeck](https://ygoprodeck.com/)
 - Yu-Gi-Oh! é propriedade da Konami
-```
