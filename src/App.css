@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: #fff;
+}
+
+.app-header {
+  background: linear-gradient(145deg, #2a2a3e, #1f1f2e);
+  padding: 1.5rem 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid rgba(138, 43, 226, 0.3);
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  gap: 1rem;
+}
+
+.back-button {
+  padding: 0.65rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(-3px);
+}
+
+.app-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.title-icon {
+  font-size: 2rem;
+  filter: drop-shadow(0 4px 8px rgba(138, 43, 226, 0.5));
+}
+
+.app-subtitle {
+  font-size: 0.95rem;
+  color: #a8a8b3;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.random-button {
+  padding: 0.65rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(245, 87, 108, 0.3);
+  white-space: nowrap;
+}
+
+.random-button:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(245, 87, 108, 0.5);
+}
+
+.random-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.random-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.app-main {
+  padding: 2rem 0;
+  min-height: calc(100vh - 300px);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.error-message {
+  background: rgba(220, 38, 38, 0.2);
+  border: 1px solid rgba(220, 38, 38, 0.5);
+  color: #fca5a5;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 500;
+}
+
+.error-message span {
+  font-size: 1.5rem;
+}
+
+.results-info {
+  margin-bottom: 1rem;
+  color: #a8a8b3;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.results-info p {
+  margin: 0;
+}
+
+.app-footer {
+  background: linear-gradient(145deg, #1f1f2e, #2a2a3e);
+  padding: 2rem 1rem;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 3rem;
+}
+
+.app-footer p {
+  color: #a8a8b3;
+  margin: 0;
+}
+
+.app-footer a {
+  color: #8a2be2;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.app-footer a:hover {
+  color: #b565f5;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    padding: 1rem;
+  }
+
+  .header-top {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .back-button {
+    width: 100%;
+    order: 3;
+  }
+
+  .app-title {
+    font-size: 1.5rem;
+    order: 1;
+  }
+
+  .title-icon {
+    font-size: 1.5rem;
+  }
+
+  .app-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .random-button {
+    width: 100%;
+    order: 2;
+    padding: 0.65rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .app-main {
+    padding: 1rem 0;
+  }
+
+  .container {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-title {
+    font-size: 1.25rem;
+  }
+
+  .title-icon {
+    font-size: 1.25rem;
+  }
+
+  .app-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .back-button,
+  .random-button {
+    font-size: 0.85rem;
+    padding: 0.6rem 1.25rem;
+  }
+}
